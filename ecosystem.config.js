@@ -18,11 +18,8 @@ module.exports = {
       ref: "origin/main",
       repo: process.env.FRONTEND_REPO,
       path: process.env.DEPLOY_PATH + "/frontend",
-      "post-deploy": `
-        npm install &&
-        npm run build &&
-        pm2 startOrRestart ecosystem.frontend.config.js --env production
-      `,
+      "post-deploy":
+        ". /home/hillel/.nvm/nvm.sh && npm install && npm run build && pm2 startOrRestart ecosystem.config.js --env production",
     },
   },
 };
