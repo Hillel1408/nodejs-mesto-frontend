@@ -130,6 +130,6 @@ class Api {
   }
 }
 // Замените на адрес вашего бэкенда
-const api = new Api("http://89.169.160.13:3000");
+const api = new Api("http://api.mesto-yandex.nomorepartiessbs.ru");
 
 export default api;
